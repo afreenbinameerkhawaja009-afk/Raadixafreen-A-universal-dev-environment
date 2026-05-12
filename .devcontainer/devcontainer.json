@@ -1,0 +1,50 @@
+{
+  "name": "Universal Dev Environment",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/go:1": {},
+    "ghcr.io/devcontainers/features/rust:1": {},
+    "ghcr.io/devcontainers/features/java:1": {},
+    "ghcr.io/devcontainers/features/ruby:1": {},
+    "ghcr.io/devcontainers/features/php:1": {},
+    "ghcr.io/devcontainers/features/dotnet:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
+    "ghcr.io/devcontainers/features/terraform:1": {},
+    "ghcr.io/devcontainers-contrib/features/postgresql-client:1": {},
+    "ghcr.io/devcontainers-contrib/features/mysql-client:1": {},
+    "ghcr.io/devcontainers-contrib/features/mongodb-shell:1": {},
+    "ghcr.io/devcontainers-contrib/features/redis-cli:1": {}
+  },
+  "containerEnv": {
+    "GEMINI_YOLO": "true"
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-vscode.cpptools",
+        "ms-vscode.go",
+        "rust-lang.rust-analyzer",
+        "vscjava.vscode-java-pack",
+        "rebornix.ruby",
+        "bmewburn.vscode-intelephense-client",
+        "ms-dotnettools.csharp",
+        "ms-azuretools.vscode-docker",
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+        "hashicorp.terraform",
+        "mongodb.mongodb-vscode",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-pg",
+        "mtxr.sqltools-driver-mysql"
+      ]
+    }
+  },
+  "remoteUser": "vscode"
+}
